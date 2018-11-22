@@ -12,7 +12,7 @@
        (for ([i word])
              (display "_ ")
              (set! blanks (append blanks '("_"))))
-    (display word)
+   ; (display word)
     (guess word blanks 0)))
 
 ; Allows the user to guess a letter until they guess incorrectly 10 times 
@@ -32,13 +32,11 @@
       (display ""))
   (display "\n Tries:")
   (display tries)
-  (display (string->list word))
-  (display guessedList))
-
-  ; Check if user has guessed the whole word DOESN'T WORK 
-  (if (equal? (string->list word) guessedList)
+  (display (string->list word)) ;displays word for debugging
+  (display guessedList)
+  ; Checking if user has guessed the whole word
+  (if (equal? word (string-join guessedList ""))
       (display "Congratulations! You won!")
-      ; Check if user has guessed incorrectly 10 times 
-      (if (equal? tries 3)
+      (if (equal? tries 3); Checking if user has guessed incorrectly 10 times 
           (display "Sorry, you lost!")
-          (guess word guessedList tries))))
+          (guess word guessedList tries)))))
