@@ -113,7 +113,7 @@
      /(     )\\
     // )___( \\\\
    // (     ) \\\\
-  ()  |     |  ()
+  ( ) |     | ( )
       |  |  |
        | | |
        | | | 
@@ -130,7 +130,7 @@
      /(     )\\
     // )___( \\\\
    // (     ) \\\\
-  ()  |     |  ()
+  ( ) |     | ( )
       |  |  |
        | | |
        | | | 
@@ -148,7 +148,7 @@
      /(     )\\
     // )___( \\\\
    // (     ) \\\\
-  ()  |     |  ()
+  ( ) |     | ( )
       |  |  |
        | | |
        | | | 
@@ -173,7 +173,7 @@
 
 ; Allows the user to guess a letter until they guess incorrectly 10 times 
 (define (guess word guessedList tries)
-  (displayln (list-ref bodyParts tries))
+  (displayln (list-ref bodyParts tries)) ; display hangman body 
   (display "\nWord to Guess: ")
   (display guessedList)
   (display "\nIncorrect Guesses: ")
@@ -186,12 +186,12 @@
        (for ([i word])
          (if (string=? letter (make-string 1 i))
              (set! guessedList (list-set guessedList count letter))
-             (set! wrong (add1 wrong)))
-         (set! count (add1 count)))
+             (set! wrong (+ wrong 1)))
+         (set! count (+ count 1)))
 
   ; (display guessedList)
   (if (equal? wrong (length (string->list word)))
-      (set! tries (add1 tries))
+      (set! tries (+ tries 1))
       (display ""))
   
   ; Checking if user has guessed the whole word
