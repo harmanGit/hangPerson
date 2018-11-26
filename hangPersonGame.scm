@@ -209,5 +209,3 @@
 
 (display "Welcome to Hangman")
 (play)
-
-(define <=> "qwerty")
