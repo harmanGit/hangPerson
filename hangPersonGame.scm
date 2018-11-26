@@ -179,7 +179,7 @@
   (display "\nIncorrect Guesses: ")
   (displayln tries)
   (display "\nGuess a letter: ")
-
+  
   (let ((letter (read-line))
         (count 0)
         (wrong 0))
@@ -206,3 +206,6 @@
             (displayln (list-ref bodyParts tries))
             (display "  Sorry, you lost!"))
           (guess word guessedList tries)))))
+
+(display "Welcome to Hangman")
+(play)
