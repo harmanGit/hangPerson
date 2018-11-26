@@ -209,3 +209,37 @@
 
 (display "Welcome to Hangman")
 (play)
+
+(list 1 2 3 4 5)
+
+(define x (cons 2 “two”))
+
+(vector 1 2 3 4 5 6)
+
+(string #\h #\i)
+
+(boolean? #t)
+
+(not #f)
+(number? 123)
+(rational?  3.14)
+(real?  ⅗)
+(complex? 2+3i)
+
+(char? #\l)
+(char? #\.)
+(char? #\newline)
+
+(char-downcase? #\s)
+(char-upcase? #\p)
+
+(define q+-)
+(symbol?  q+-)
+
+(+ tries 1)
+
+(if (condition) (action-if-true) (action-if-false))
+
+(for ([ condition ])     ; body )
+
+
